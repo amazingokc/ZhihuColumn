@@ -1,8 +1,8 @@
 package com.amazingokc.zhihucolumn.model.source;
 
+import com.amazingokc.zhihucolumn.model.bean.latestnuews.LatestNewsModel;
 import com.amazingokc.zhihucolumn.model.http.MyApiService;
 import com.amazingokc.zhihucolumn.model.http.MyRetrofit;
-import com.amazingokc.zhihucolumn.utils.LLog;
 
 import rx.Observer;
 import rx.android.schedulers.AndroidSchedulers;
@@ -23,7 +23,7 @@ public class RLatestNewsSource implements LatestNewsSource{
                 .getLatestNews()
                 .subscribeOn(Schedulers.io())
                 .observeOn(AndroidSchedulers.mainThread())
-                .subscribe(new Observer<Object>() {
+                .subscribe(new Observer<LatestNewsModel>() {
 
                     @Override
                     public void onCompleted() {
@@ -34,12 +34,11 @@ public class RLatestNewsSource implements LatestNewsSource{
                     public void onError(Throwable e) {
 
                         callback.onLatestNewsNotAvailable("");
-                        LLog.d("onError", e.toString());
                     }
 
                     @Override
-                    public void onNext(Object object) {
-                        callback.onLatestNewsLoaded(object);
+                    public void onNext(LatestNewsModel latestNewsModel) {
+                        callback.onLatestNewsLoaded(latestNewsModel);
                     }
                 });
     }

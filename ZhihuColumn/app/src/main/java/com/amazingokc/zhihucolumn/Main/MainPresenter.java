@@ -1,9 +1,9 @@
 package com.amazingokc.zhihucolumn.main;
 
 import com.amazingokc.zhihucolumn.BasePresenter;
+import com.amazingokc.zhihucolumn.model.bean.latestnuews.LatestNewsModel;
 import com.amazingokc.zhihucolumn.model.source.LatestNewsSource;
 import com.amazingokc.zhihucolumn.model.source.RLatestNewsSource;
-import com.amazingokc.zhihucolumn.utils.LLog;
 
 /**
  * Created by cjy on 2017/3/7.
@@ -24,8 +24,8 @@ public class MainPresenter extends BasePresenter<MainView> {
 
         rLatestNewsSource.getLatestNews(new LatestNewsSource.GetLatestNewsCallback() {
             @Override
-            public void onLatestNewsLoaded(Object o) {
-                LLog.d("onLatestNewsLoaded", o.toString());
+            public void onLatestNewsLoaded(LatestNewsModel latestNewsModel) {
+
             }
 
             @Override
