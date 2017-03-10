@@ -1,6 +1,6 @@
 package com.amazingokc.zhihucolumn.model.source;
 
-import com.amazingokc.zhihucolumn.model.bean.latestnuews.LatestNewsModel;
+import com.amazingokc.zhihucolumn.model.bean.latestnews.LatestNewsModel;
 import com.amazingokc.zhihucolumn.model.http.MyApiService;
 import com.amazingokc.zhihucolumn.model.http.MyRetrofit;
 

@@ -1,4 +1,4 @@
-package com.amazingokc.zhihucolumn.model.bean.latestnuews;
+package com.amazingokc.zhihucolumn.model.bean.latestnews;
 
 import java.io.Serializable;
 import java.util.List;
