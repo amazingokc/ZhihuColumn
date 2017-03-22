@@ -1,56 +1,84 @@
 <?xml version="1.0" encoding="utf-8"?>
-<com.amazingokc.zhihucolumn.view.MyParentView xmlns:android="http://schemas.android.com/apk/res/android"
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/activity_main"
     android:layout_width="match_parent"
-    android:orientation="vertical"
-    android:layout_height="match_parent">
+    android:layout_height="match_parent"
+    >
 
-    <ImageView
-        android:id="@+id/iview"
-        android:background="@drawable/icoo"
+    <TextView
+        android:id="@+id/txt"
+        android:textColor="@color/colorBlack"
         android:layout_width="match_parent"
-        android:layout_height="100dp" />
+        android:layout_height="wrap_content"
+        android:text=""/>
 
-    <ScrollView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent">
+    <com.amazingokc.zhihucolumn.view.CheckView
+        android:id="@+id/checkview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content" />
 
-        <LinearLayout
+
+
+
+
+       <!-- <com.amazingokc.zhihucolumn.view.MyParentView
+            android:id="@+id/myparentview"
             android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="match_parent">
 
-            <TextView
-                android:gravity="center"
-                android:textColor="@color/colorBlack"
-                android:text="1"
+            <ImageView
+                android:id="@+id/iview"
                 android:layout_width="match_parent"
-                android:layout_height="200dp" />
-            <TextView
-                android:gravity="center"
-                android:textColor="@color/colorBlack"
-                android:text="1"
+                android:layout_height="100dp"
+                android:background="@drawable/icoo" />
+
+            <ScrollView
+                android:id="@+id/scrollview"
                 android:layout_width="match_parent"
-                android:layout_height="200dp" />
-            <TextView
-                android:gravity="center"
-                android:textColor="@color/colorBlack"
-                android:text="1"
-                android:layout_width="match_parent"
-                android:layout_height="200dp" />
-            <TextView
-                android:gravity="center"
-                android:textColor="@color/colorBlack"
-                android:text="1"
-                android:layout_width="match_parent"
-                android:layout_height="200dp" />
-        </LinearLayout>
-        
+                android:layout_height="match_parent"
+                android:background="@color/colorAccent">
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:gravity="center"
+                        android:text="1"
+                        android:textColor="@color/colorBlack" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:gravity="center"
+                        android:text="2"
+                        android:textColor="@color/colorBlack" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:gravity="center"
+                        android:text="3"
+                        android:textColor="@color/colorBlack" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="200dp"
+                        android:gravity="center"
+                        android:text="4"
+                        android:textColor="@color/colorBlack" />
+                </LinearLayout>
+
+            </ScrollView>
+
+        </com.amazingokc.zhihucolumn.view.MyParentView>-->
 
 
-    </ScrollView>
 
-
-</com.amazingokc.zhihucolumn.view.MyParentView>
+</RelativeLayout>

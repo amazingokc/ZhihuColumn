@@ -4,24 +4,18 @@ import android.content.Context;
 import android.os.Bundle;
 import android.support.annotation.Nullable;
 import android.support.v4.app.Fragment;
-import android.support.v4.view.ViewPager;
 import android.support.v7.app.ActionBar;
-import android.support.v7.widget.LinearLayoutManager;
-import android.support.v7.widget.RecyclerView;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 
 import com.amazingokc.zhihucolumn.R;
 import com.amazingokc.zhihucolumn.model.bean.latestnews.TopstoriesModel;
-import com.amazingokc.zhihucolumn.mommon.adapter.StoriesAdapter;
 import com.amazingokc.zhihucolumn.mommon.adapter.TopStoriesAdapter;
-import com.amazingokc.zhihucolumn.view.CirclePageIndicator;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import butterknife.BindView;
 import butterknife.ButterKnife;
 
 /**
@@ -29,19 +23,19 @@ import butterknife.ButterKnife;
  */
 public class StoriesFragment extends Fragment implements MainView {
     // TODO: Rename parameter arguments, choose names that match
-    @BindView(R.id.viewpager)
-    ViewPager viewpager;
-    @BindView(R.id.rcview_stories)
-    RecyclerView rcviewStories;
-    @BindView(R.id.indicator)
-    CirclePageIndicator indicator;
+//    @BindView(R.id.viewpager)
+//    ViewPager viewpager;
+//    @BindView(R.id.rcview_stories)
+//    RecyclerView rcviewStories;
+//    @BindView(R.id.indicator)
+//    CirclePageIndicator indicator;
 
     private MainPresenter presenter;
     private ActionBar actionBar;
 
     private List<TopstoriesModel> topstoriesModelList;
     private TopStoriesAdapter topStoriesAdapter;
-    private StoriesAdapter storiesAdapter;
+//    private StoriesAdapter storiesAdapter;
 
     public StoriesFragment() {
         // Required empty public constructor
@@ -77,7 +71,7 @@ public class StoriesFragment extends Fragment implements MainView {
     @Override
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
-        initViewpage();
+//        initViewpage();
     }
 
     @Override
@@ -102,14 +96,14 @@ public class StoriesFragment extends Fragment implements MainView {
 
         topstoriesModelList = new ArrayList<>();
         topStoriesAdapter = new TopStoriesAdapter(topstoriesModelList);
-        viewpager.setOffscreenPageLimit(2);
-        viewpager.setCurrentItem(0);
-        viewpager.setAdapter(topStoriesAdapter);
-        indicator.setViewPager(viewpager);
-
-        storiesAdapter = new StoriesAdapter();
-        rcviewStories.setLayoutManager(new LinearLayoutManager(getContext()));
-        rcviewStories.setAdapter(storiesAdapter);
+//        viewpager.setOffscreenPageLimit(2);
+//        viewpager.setCurrentItem(0);
+//        viewpager.setAdapter(topStoriesAdapter);
+//        indicator.setViewPager(viewpager);
+//
+//        storiesAdapter = new StoriesAdapter();
+//        rcviewStories.setLayoutManager(new LinearLayoutManager(getContext()));
+//        rcviewStories.setAdapter(storiesAdapter);
     }
 
 
