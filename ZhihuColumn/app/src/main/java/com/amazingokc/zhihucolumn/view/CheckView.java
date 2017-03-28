@@ -9,7 +9,6 @@ import android.graphics.Rect;
 import android.os.Handler;
 import android.os.Message;
 import android.util.AttributeSet;
-import android.util.Log;
 import android.view.View;
 
 import com.amazingokc.zhihucolumn.R;
@@ -77,7 +76,6 @@ public class CheckView extends View {
                     }
                     invalidate();
                     this.sendEmptyMessageDelayed(0, animDuration / animMaxPage);
-                    Log.e("AAA", "Count=" + animCurrentPage);
                 } else {
                     if (isCheck) {
                         animCurrentPage = animMaxPage - 1;
@@ -122,7 +120,6 @@ public class CheckView extends View {
         // 得出图像边长
         int sideLength = okBitmap.getHeight();
         int sideWidth = okBitmap.getWidth();
-        Log.e("AAA", "onDraw=" + animCurrentPage);
         // 得到图像选区 和 实际绘制位置
 //        Rect src = new Rect(sideLength * animCurrentPage, 0, sideLength * (animCurrentPage + 1), sideLength);
 //        Rect dst = new Rect(-200, -200, 200, 200);
@@ -133,7 +130,6 @@ public class CheckView extends View {
         // 绘制
         canvas.drawBitmap(okBitmap, src, dst, null);
     }
-
 
     /**
      * 选择

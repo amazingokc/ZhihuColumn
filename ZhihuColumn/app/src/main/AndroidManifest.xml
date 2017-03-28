@@ -23,7 +23,8 @@
         </activity>
         <activity android:name=".BaseActivity" />
         <!-- <activity android:name=".main.ContentDetailActivity"></activity> -->
-        <!--<activity android:name=".main.TouchTestActivity"></activity>-->
+        <!-- <activity android:name=".main.TouchTestActivity"></activity> -->
+        <activity android:name=".main.BlurredAlbumArtActivity"></activity>
     </application>
 
 </manifest>

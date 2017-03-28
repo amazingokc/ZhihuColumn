@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     >
 
-    <TextView
+    <!--<TextView
         android:id="@+id/txt"
         android:textColor="@color/colorBlack"
         android:layout_width="match_parent"
@@ -17,7 +17,13 @@
     <com.amazingokc.zhihucolumn.view.CheckView
         android:id="@+id/checkview"
         android:layout_width="wrap_content"
-        android:layout_height="wrap_content" />
+        android:layout_height="wrap_content" />-->
+
+    <ImageView
+        android:scaleType="centerCrop"
+        android:id="@+id/iview_bru"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" />
 
 
 
